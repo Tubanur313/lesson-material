@@ -1,0 +1,57 @@
+<div class="container-fluid p-3">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle (change)="onValChange($event.value)" value="bold">Bold</mat-button-toggle>
+        <mat-button-toggle (change)="onValChange($event.value)" value="italic">Italic</mat-button-toggle>
+        <mat-button-toggle (change)="onValChange($event.value)" value="underline">Underline</mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
+
+
+<mat-card class="example-card m-2">
+    <mat-card-header>
+        <mat-card-title *ngIf="type=='bold'">Bold</mat-card-title>
+        <mat-card-title *ngIf="type=='italic'">Italic</mat-card-title>
+        <mat-card-title *ngIf="type=='underline'">Underline</mat-card-title>
+
+    </mat-card-header>
+    <mat-card-content>
+        <p>This card has divider and indeterminate progress as footer</p>
+        <p>{{ longText }}</p>
+        <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+    </mat-card-actions>
+    <mat-card-footer>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+</mat-card>
+
+<mat-divider></mat-divider>
+<div class="container p-3">
+    <mat-accordion>
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    This is the expansion title
+                </mat-panel-title>
+                <mat-panel-description>
+                    This is a summary of the content
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Self aware panel
+                </mat-panel-title>
+                <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
