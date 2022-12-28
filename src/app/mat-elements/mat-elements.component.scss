@@ -1,0 +1,39 @@
+.accordion-button:focus {
+    border: 0!important;
+    outline: 0!important;
+    box-shadow: none;
+}
+
+.accordion-button.collapsed {
+    background: white;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black!important;
+    font-weight: bold!important;
+    background-color: transparent;
+    &::before {
+        font-size: 30px;
+        content: " - ";
+        font-weight: bold!important;
+        padding: 0 10px;
+    }
+}
+
+.accordion-button {
+    color: #888!important;
+    font-weight: bold!important;
+    &::before {
+        font-size: 20px;
+        content: " + ";
+        padding: 0 10px;
+    }
+}
+
+.accordion {
+    --bs-accordion-border-color: white!important;
+}
+
+.accordion-button:focus {
+    border-color: white!important;
+}
