@@ -6,17 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  longText = "Hello world";
-  type = "bold";
-  panelOpenState = false;
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  onValChange(value: any) {
-    this.type = value;
-    console.log(value)
   }
 
 }

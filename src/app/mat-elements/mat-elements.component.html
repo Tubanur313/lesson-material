@@ -1,0 +1,28 @@
+<div class="container p-3">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle (change)="onValChange($event.value)" value="bold">Bold</mat-button-toggle>
+        <mat-button-toggle (change)="onValChange($event.value)" value="italic">Italic</mat-button-toggle>
+        <mat-button-toggle (change)="onValChange($event.value)" value="underline">Underline</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <mat-card class="example-card my-4">
+        <mat-card-header class="m-0">
+            <mat-card-title *ngIf="type=='bold'">Bold</mat-card-title>
+            <mat-card-title *ngIf="type=='italic'">Italic</mat-card-title>
+            <mat-card-title *ngIf="type=='underline'">Underline</mat-card-title>
+
+        </mat-card-header>
+        <mat-card-content>
+
+            <p>{{ longText }}</p>
+            <mat-divider></mat-divider>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+        <mat-card-footer>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+    </mat-card>
+</div>
