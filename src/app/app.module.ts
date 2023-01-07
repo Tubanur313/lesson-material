@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './material.module';
 import { FagComponent } from './fag/fag.component';
 import { MatElementsComponent } from './mat-elements/mat-elements.component';
+import { NewsDialogComponent } from './news-dialog/news-dialog.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MatElementsComponent } from './mat-elements/mat-elements.component';
     HeaderComponent,
     FooterComponent,
     FagComponent,
-    MatElementsComponent
+    MatElementsComponent,
+    NewsDialogComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,7 @@ import { MatElementsComponent } from './mat-elements/mat-elements.component';
     MaterialModule,
     BrowserAnimationsModule
   ],
+  entryComponents: [NewsDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

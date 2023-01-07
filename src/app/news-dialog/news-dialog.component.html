@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>News detail </h1>
+<div *ngIf="data" mat-dialog-content>
+    <h1>{{data.title}}</h1>
+    <p>{{data.article}}</p>
+    <img [src]="data.img_path" alt=" ">
+
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick() ">No Thanks</button>
+    <button mat-button cdkFocusInitial>Ok</button>
+</div>

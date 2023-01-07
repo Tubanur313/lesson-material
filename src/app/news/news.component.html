@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="title">News</h1>
+
+
+    <mat-card *ngFor="let item of arr; let i = index" class="mb-3">
+        <mat-card-header>
+            <mat-card-title>{{item.title}}</mat-card-title>
+
+        </mat-card-header>
+        <mat-card-actions align="end">
+
+            <button mat-button (click)="openDialog(i)">DETAIL</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
