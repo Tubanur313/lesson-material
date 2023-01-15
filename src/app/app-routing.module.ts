@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { FagComponent } from './fag/fag.component';
 import { HomeComponent } from './home/home.component';
 import { MatElementsComponent } from './mat-elements/mat-elements.component';
+import { MyFormComponent } from './my-form/my-form.component';
 import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'mat-elements', component: MatElementsComponent },
   { path: 'fag', component: FagComponent },
   { path: 'news', component: NewsComponent },
+  { path: 'my-form', component: MyFormComponent },
 ];
 
 @NgModule({

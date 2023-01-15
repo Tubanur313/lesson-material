@@ -1,0 +1,47 @@
+<div class="container-fluid d-flex justify-content-center p-3">
+    <form [formGroup]="myForm" (ngSubmit)="sendForm()">
+        <!-- <label for="">Name:</label>
+        <input type="text" formControlName="name"> <br><br>
+
+        <label for="">Surname:</label>
+        <input type="text" formControlName="surname"> <br><br>
+        <label for="">Password:</label>
+        <input type="password" formControlName="password"> <br><br>
+
+        <button>Send</button> -->
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput formControlName="name" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+            <mat-hint>Errors appear instantly!</mat-hint>
+
+            <mat-error *ngIf="getFormControl('name').hasError('required')">
+                Name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Surname</mat-label>
+            <input type="text" matInput formControlName="surname" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+            <mat-hint>Errors appear instantly!</mat-hint>
+
+            <mat-error *ngIf="getFormControl('surname').hasError('required')">
+                Surname is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+            <mat-hint>Errors appear instantly!</mat-hint>
+
+            <mat-error *ngIf="getFormControl('password').hasError('required')">
+                Password is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <br> <button type="button" (click)="reset()" lass="mt-5" style="" mat-raised-button color="accent">Reset</button>
+        <button type="submit" [disabled]="!myForm.valid" lass="mt-5" style="float: right!important;" mat-raised-button color="primary">Send</button>
+    </form>
+</div>

@@ -13,6 +13,8 @@ import { FagComponent } from './fag/fag.component';
 import { MatElementsComponent } from './mat-elements/mat-elements.component';
 import { NewsDialogComponent } from './news-dialog/news-dialog.component';
 import { NewsComponent } from './news/news.component';
+import { MyFormComponent } from './my-form/my-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,15 @@ import { NewsComponent } from './news/news.component';
     FagComponent,
     MatElementsComponent,
     NewsDialogComponent,
-    NewsComponent
+    NewsComponent,
+    MyFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule
   ],
   entryComponents: [NewsDialogComponent],
